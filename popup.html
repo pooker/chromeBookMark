@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://developer.chrome.com/extensions/examples/tutorials/getstarted/popup.html -->
+<html>
+<div class="oneNoteWebClipperIsInstalledOnThisBrowser" style="display: none;"></div>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        input, textarea {
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            outline: none;
+            padding: 3px 0px 3px 3px;
+            margin: 5px 1px 3px 0px;
+            border: 1px solid #DDDDDD;
+        }
+        input:focus, textarea:focus{
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            padding: 3px 0px 3px 3px;
+            margin: 5px 1px 3px 0px;
+            border: 1px solid rgba(81, 203, 238, 1);
+        }
+        input#save {
+            font-weight: bold;
+            width: 100%;
+            margin: 0 auto;
+            color: #fff;
+            background-color: #4285f4;
+        }
+    </style>
+    <script src="send.js"></script>
+</head>
+<body>
+<form id="addbookmark">
+    <p>
+        <label for="title">标题:</label><br>
+        <input type="text" id="title" name="title" size="50" value=""/>
+    </p>
+    <p><label for="url">链接:</label><br/>
+        <input type="text" id="url" name="url" size="50" value=""/></p>
+    <p><label for="summary">概要:(鼠标滑动选中)</label><br/>
+        <textarea id="summary" name="desc" rows="4" cols="50"></textarea></p>
+    <p><label for="tags">标签</label><br/>
+        <input type="text" id="tags" name="tags" size="50" value=""/></p>
+    <p>
+        <input id="save" type="submit" value="Save"/>
+        <span id="status-display"></span>
+    </p>
+</form>
+</body>
+</html>
